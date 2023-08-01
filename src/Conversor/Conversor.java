@@ -30,10 +30,11 @@ public class Conversor {
 		}
 		
 		BigDecimal bd = new BigDecimal(resultadoConversion);
-		return bd.setScale(10,RoundingMode.UP).toString() ;		
+		return bd.setScale(3,RoundingMode.UP).toString() ;		
 		
 		
 	}
+	
 
 	public String  conversorTemperatura(double cantidad, double valorCeroIni,double valorIncrementalIni,double valorCeroFin, double valorIncrementalFin ) {
 		//para realizar la conversion de temperaturas se toma como mediad estandar los grados celsius por lo que se convertira a es valor y luego a las demas medidas de temperatura que se requiera. 
@@ -44,12 +45,12 @@ public class Conversor {
 		
 		resultadoConversion = valorCeroFin+(conversionInicial*valorIncrementalFin);
 		BigDecimal bd = new BigDecimal(resultadoConversion);
-		return bd.setScale(10,RoundingMode.UP).toString() ;	
+		return bd.setScale(3,RoundingMode.UP).toString() ;	
 		
 	}
 	
-	public int valorIndice(JComboBox comoBox) {
-		int indice =comoBox.getSelectedIndex();
+	public int valorIndice(JComboBox comBox) {
+		int indice =comBox.getSelectedIndex();
 		return indice;		
 	}
 	public double obtenerCantidad(JTextField textField) {

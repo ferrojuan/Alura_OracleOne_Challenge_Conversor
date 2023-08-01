@@ -4,6 +4,8 @@ import Conversor.Conversor;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.math.BigDecimal;
+
 import Enums.*;
 
 
@@ -241,8 +243,8 @@ public class VentanaConversor extends  JFrame {
 				
 				switch (tipoConversor) {
 				case 0: {
-					valorInicial = moneda[indexValorInicial].getValorMoneda();
-					valorFinal = moneda[indexValorFinal].getValorMoneda();
+					valorInicial = moneda[indexValorInicial].getValorMoneda().doubleValue();
+					valorFinal = moneda[indexValorFinal].getValorMoneda().doubleValue();
 					textoAdicional =moneda[indexValorFinal].getNombreMoneda();
 					txtValorFinal.setText(conversor.conversorMonedaLongitud(cantidad, valorInicial, valorFinal));
 					lblTextoAdicional.setText(textoAdicional);
